@@ -6,7 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="src/util/reset.css">
         <link rel="stylesheet" href="src/index.css">
-        <link href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,700,900&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,700,900&display=swap"
+            rel="stylesheet">
         <title>Pokedex</title>
     </head>
     <body>
@@ -25,10 +27,14 @@
                         <h2 class="pokemon-name">Charizard</h2>
                         <ul class="pokemon-types">
                             <li>
-                                <img src="./assets/img/type-icons-rectangular/type-fire-rec.png" alt="">
+                                <img
+                                    src="./assets/img/type-icons-rectangular/type-fire-rec.png"
+                                    alt="">
                             </li>
                             <li>
-                                <img src="./assets/img/type-icons-rectangular/type-flying-rec.png" alt="">
+                                <img
+                                    src="./assets/img/type-icons-rectangular/type-flying-rec.png"
+                                    alt="">
                             </li>
                         </ul>
                     </li>
@@ -39,10 +45,14 @@
                         <h2 class="pokemon-name">Lapras</h2>
                         <ul class="pokemon-types">
                             <li>
-                                <img src="./assets/img/type-icons-rectangular/type-water-rec.png" alt="">
+                                <img
+                                    src="./assets/img/type-icons-rectangular/type-water-rec.png"
+                                    alt="">
                             </li>
                             <li>
-                                <img src="./assets/img/type-icons-rectangular/type-ice-rec.png" alt="">
+                                <img
+                                    src="./assets/img/type-icons-rectangular/type-ice-rec.png"
+                                    alt="">
                             </li>
                         </ul>
                     </li>
@@ -144,20 +154,115 @@
                     </li>
                 </ul>
             </section>
-            <section id="scroll-options-container">
-                <img id="pokeball-icon" src="./assets/img/pokeballs/pokeball.png"
+            <section id="side-nav-container">
+                <img id="pokeball-icon"
+                    src="./assets/img/pokeballs/pokeball.png"
                     alt="pokeball icon">
-                <ul id="scroll-options">
-                    <li><a href="">Sort</a></li>
-                    <li><a href="">Sort</a></li>
-                    <li><a href="">Sort</a></li>
-                    <li><a href="">Sort</a></li>
+                <ul id="side-nav">
+                    <li class="side-nav-item">
+                        <button id="filter-button">Filter</button>
+                        <div id="sort-types" class="sort-types hidden">
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/bug.png"
+                                    alt="bug">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/dark.png"
+                                    alt="dark">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/dragon.png"
+                                    alt="dragon">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/electric.png"
+                                    alt="electric">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/fairy.png"
+                                    alt="fairy">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/fighting.png"
+                                    alt="fighting">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/fire.png"
+                                    alt="fire">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/flying.png"
+                                    alt="flying">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/ghost.png"
+                                    alt="ghost">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/grass.png"
+                                    alt="grass">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/ground.png"
+                                    alt="ground">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/ice.png"
+                                    alt="ice">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/normal.png"
+                                    alt="normal">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/poison.png"
+                                    alt="poison">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/psychic.png"
+                                    alt="psychic">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/rock.png"
+                                    alt="rock">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/steel.png"
+                                    alt="steel">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/water.png"
+                                    alt="water">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="side-nav-item">
+                        <button>Clear</button>
+                    </li>
                 </ul>
             </section>
         </main>
         <footer>
 
         </footer>
-
+        <script src="./app.js"></script>
     </body>
 </html>
