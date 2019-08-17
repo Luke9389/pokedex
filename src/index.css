@@ -162,6 +162,7 @@ main {
 
 .side-nav-item button {
     text-decoration: none;
+    outline: none;
     background-color: transparent;
     border-color: transparent;
     color: white;
@@ -185,6 +186,10 @@ main {
     overflow-y: scroll;
     transition: max-height 0.3s;
     max-height: 10rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .hidden {
