@@ -162,11 +162,17 @@ main {
 
 .side-nav-item button {
     text-decoration: none;
+    background-color: transparent;
+    border-color: transparent;
     color: white;
     text-transform: uppercase;
     text-align: center;
     font-size: 0.8rem;
     font-family: 'Kanit', sans-serif;
+}
+
+.side-nav-item button:hover {
+    font-weight: 700;
 }
 
 .sort-types {
