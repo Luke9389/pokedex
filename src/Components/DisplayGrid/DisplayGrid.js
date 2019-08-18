@@ -16,7 +16,6 @@ export class DisplayGrid extends Component {
 
         pokeProps.forEach(pokemon => {
             const props = { pokemon: pokemon };
-            console.log(props);
             const pokemonCard = new PokemonCard(props);
             dom.appendChild(pokemonCard.renderDOM());
         });

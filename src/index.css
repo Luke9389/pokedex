@@ -91,8 +91,6 @@ main {
     grid-template-areas: ". card-display";
 }
 
-
-
 #card-display-section {
     grid-area: card-display;
     width: 100%;
@@ -162,13 +160,6 @@ main {
     background-repeat: no-repeat;
 }
 
-/* 
-.card .pokemon-types li img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 #side-nav-container {
     position: fixed;
     width: 3rem;
@@ -214,9 +205,18 @@ main {
     width: 100%;
 }
 
+.side-nav-item p {
+    margin-top: 1rem;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 'Kanit', sans-serif;
+}
+
 .side-nav-item button {
     text-decoration: none;
-    outline: none;
+    /* outline: none; */
     background-color: transparent;
     border-color: transparent;
     color: white;
@@ -226,6 +226,11 @@ main {
     font-family: 'Kanit', sans-serif;
     width: 100%;
     padding: 0px;
+}
+
+.side-nav-item [class^=page] {
+    margin-top: 0.3rem;
+    font-size: 1rem;
 }
 
 .side-nav-item button:hover {

@@ -2,7 +2,8 @@ import Component from '../../Component.js';
 import { Header } from './Header.js';
 import { DisplayGrid } from '../DisplayGrid/DisplayGrid.js';
 import { SideNav } from '../SideNav/SideNav.js';
-// import { dummyPokeData } from '../../util/dummyPokeData.js';
+import { getHeroPokemon } from '../../services/get-hero-pokemon.js';
+
 
 export class App extends Component {
     renderHTML() {
@@ -24,14 +25,18 @@ export class App extends Component {
             pokemon: []
         };
 
+        getHeroPokemon()
+            .then(data => {
+                const pokemon = data.results;
+                return pokemon;
+            });
 
-        const url = 'https://alchemy-pokedex.herokuapp.com/api/pokedex';
+        const url = 'https://alchemy-pokedex.herokuapp.com/api/pokedex?sort=id';
 
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 displayGrid.update({ pokemon: data.results });
-                console.log(displayGridProps.pokemon);
             });
 
 

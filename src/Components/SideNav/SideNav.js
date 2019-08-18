@@ -1,4 +1,5 @@
 import Component from '../../Component.js';
+import { Paging } from './Paging.js';
 
 export class SideNav extends Component {
     renderHTML() {
@@ -38,6 +39,10 @@ export class SideNav extends Component {
     }
 
     onRender(dom) {
+        const paging = new Paging();
+        const sideNav = dom.querySelector('#side-nav');
+        sideNav.appendChild(paging.renderDOM());
+
         const filterButton = dom.querySelector('#filter-button');
         filterButton.addEventListener('click', () => {
             const sideNavPokeball = dom.querySelector('#pokeball-icon');

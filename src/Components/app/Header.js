@@ -10,7 +10,7 @@ export class Header extends Component {
                 <div id="search-bar-container">
                     <input id="search-bar" disabled type="text" placeholder="Search">
                         <button id="reveal-search-button">
-                            <img id="search-icon" src="./assets/img/search-icon.png" alt="search">
+                        <img id="search-icon" src="./assets/img/search-icon.png" alt="search">
                 </button>     
             </div>
         </header>
@@ -21,11 +21,14 @@ export class Header extends Component {
         const searchButton = dom.querySelector('#reveal-search-button');
         searchButton.addEventListener('click', () => {
             const searchBarContainer = dom.querySelector('#search-bar-container');
-            searchBarContainer.classList.toggle('long');
-
             const searchBar = dom.querySelector('#search-bar');
-            searchBar.toggleAttribute('disabled');
-            searchBar.classList.toggle('opaque');
+
+            if(!searchBar.value) {
+                searchBarContainer.classList.toggle('long');
+                searchBar.toggleAttribute('disabled');
+                searchBar.classList.toggle('opaque');
+            }
+
         });
     }
 }
