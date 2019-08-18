@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="src/util/reset.css">
+        <link rel="stylesheet" href="src/index.css">
+        <link rel="stylesheet" href="src/types.css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Kanit:300,400,500,700,900&display=swap"
+            rel="stylesheet">
+        <title>Pokedex</title>
+    </head>
+    <body>
+        <header>
+            <img id="pokedex-lense" src="./assets/img/pokedex/pokedex-lense.png"
+                alt="pokedex lense">
+            <h1>Pokedex!</h1>
+            <div id="search-bar-container">
+                <input id="search-bar" disabled type="text" placeholder="Search">
+                <button id="reveal-search-button">
+                    <img id="search-icon" src="./assets/img/search-icon.png"alt="search">
+                </button>     
+            </div>
+        </header>
+        <main>
+            <section id="card-display-section">
+                <ul id="card-display-list">
+                    <li class="card">
+                        <p class="pokemon-number">#019</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/charizard.png">
+                        <h2 class="pokemon-name">Charizard</h2>
+                        <ul class="pokemon-types">
+                            <li class="fire">
+                            </li>
+                            <li class="flying">
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p class="pokemon-number">#018</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/lapras.png">
+                        <h2 class="pokemon-name">Lapras</h2>
+                        <ul class="pokemon-types">
+                            <li class="ice">
+                            </li>
+                            <li class="water">
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p class="pokemon-number">#017</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/ninetales.png">
+                        <h2 class="pokemon-name">Ninetales</h2>
+                        <ul class="pokemon-types">
+                            <li>Fire</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p class="pokemon-number">#017</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/snorlax.png">
+                        <h2 class="pokemon-name">Snorlax</h2>
+                        <ul class="pokemon-types">
+                            <li>Normal</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p class="pokemon-number">#017</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/exeggutor.png">
+                        <h2 class="pokemon-name">Exeggutor</h2>
+                        <ul class="pokemon-types">
+                            <li>Psychic</li>
+                            <li>Grass</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p class="pokemon-number">#017</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/gengar.png">
+                        <h2 class="pokemon-name">Gengar</h2>
+                        <ul class="pokemon-types">
+                            <li>Ghost</li>
+                            <li>Poison</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p class="pokemon-number">#017</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/charizard.png">
+                        <h2 class="pokemon-name">Charizard</h2>
+                        <ul class="pokemon-types">
+                            <li>Fire</li>
+                            <li>Flying</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p>#17</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/lapras.png">
+                        <h2 class="pokemon-name">Lapras</h2>
+                        <ul class="pokemon-types">
+                            <li>Water</li>
+                            <li>Ice</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p>#17</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/ninetales.png">
+                        <h2 class="pokemon-name">Ninetales</h2>
+                        <ul class="pokemon-types">
+                            <li>Fire</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p>#17</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/snorlax.png">
+                        <h2 class="pokemon-name">Snorlax</h2>
+                        <ul class="pokemon-types">
+                            <li>Normal</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p>#17</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/exeggutor.png">
+                        <h2 class="pokemon-name">Exeggutor</h2>
+                        <ul class="pokemon-types">
+                            <li>Psychic</li>
+                            <li>Grass</li>
+                        </ul>
+                    </li>
+                    <li class="card">
+                        <p>#17</p>
+                        <img class="card-image"
+                            src="./assets/img/portraits/gengar.png">
+                        <h2 class="pokemon-name">Gengar</h2>
+                        <ul class="pokemon-types">
+                            <li>Ghost</li>
+                            <li>Poison</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section id="side-nav-container">
+                <img id="pokeball-icon"
+                    src="./assets/img/pokeballs/pokeball.png"
+                    alt="pokeball icon">
+                <ul id="side-nav">
+                    <li class="side-nav-item">
+                        <button id="filter-button">Filter</button>
+                        <div id="sort-types" class="sort-types scrunch">
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/bug.png"
+                                    alt="bug">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/dark.png"
+                                    alt="dark">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/dragon.png"
+                                    alt="dragon">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/electric.png"
+                                    alt="electric">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/fairy.png"
+                                    alt="fairy">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/fighting.png"
+                                    alt="fighting">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/fire.png"
+                                    alt="fire">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/flying.png"
+                                    alt="flying">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/ghost.png"
+                                    alt="ghost">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/grass.png"
+                                    alt="grass">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/ground.png"
+                                    alt="ground">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/ice.png"
+                                    alt="ice">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/normal.png"
+                                    alt="normal">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/poison.png"
+                                    alt="poison">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/psychic.png"
+                                    alt="psychic">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/rock.png"
+                                    alt="rock">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/steel.png"
+                                    alt="steel">
+                            </a>
+                            <a>
+                                <img
+                                    src="./assets/img/type-icons-circular/water.png"
+                                    alt="water">
+                            </a>
+                        </div>
+                    </li>
+                    <li class="side-nav-item">
+                        <button>Clear</button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="./app.js"></script>
+    </body>
+</html>
