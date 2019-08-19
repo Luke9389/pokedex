@@ -3,6 +3,7 @@ import { Header } from './Header.js';
 import { DisplayGrid } from '../DisplayGrid/DisplayGrid.js';
 import { SideNav } from '../SideNav/SideNav.js';
 import { getHeroPokemon } from '../../services/get-hero-pokemon.js';
+import hashStorage from '../../services/hash-storage.js';
 
 
 export class App extends Component {
@@ -25,29 +26,34 @@ export class App extends Component {
             pokemon: []
         };
 
-        getHeroPokemon()
-            .then(data => {
-                const pokemon = data.results;
-                return pokemon;
-            });
-
-        const url = 'https://alchemy-pokedex.herokuapp.com/api/pokedex?sort=id';
-
-        fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                displayGrid.update({ pokemon: data.results });
-            });
-
-
+        loadHeroPokemon();
         const displayGrid = new DisplayGrid(displayGridProps);
         const displayGridSection = dom.querySelector('#card-display-section');
         displayGridSection.appendChild(displayGrid.renderDOM());
-
-
+        
+        
         const sideNav = new SideNav();
         const sideNavSection = dom.querySelector('#side-nav-container');
         sideNavSection.appendChild(sideNav.renderDOM());
+        
+        function loadHeroPokemon() {
+            const settings = hashStorage.get();
+            getHeroPokemon(settings)
+                .then(data => {
+                    const pokemon = data.results;
+                    const totalCards = data.count;
+
+                    displayGrid.update({ pokemon: pokemon });
+                    sideNav.update({ 
+                        totalCards: +totalCards,
+                        currentPage: +settings.page || 1
+                    });
+                });
+        }
+
+        window.addEventListener('hashchange', () => {
+            loadHeroPokemon();
+        });
     }
 
 

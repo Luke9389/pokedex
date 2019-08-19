@@ -7,7 +7,7 @@ export class SideNav extends Component {
             <div>
                 <img id="pokeball-icon" src="./assets/img/pokeballs/pokeball.png" alt="pokeball icon">
                 <ul id="side-nav">
-                    <li class="side-nav-item">
+                    <li class="side-nav-item" id="sort-types-container">
                         <button id="filter-button">Filter</button>
                         <div id="sort-types" class="sort-types scrunch">
                             <a><img src="./assets/img/type-icons-circular/bug.png" alt="bug"></a>
@@ -39,19 +39,31 @@ export class SideNav extends Component {
     }
 
     onRender(dom) {
-        const paging = new Paging();
-        const sideNav = dom.querySelector('#side-nav');
-        sideNav.appendChild(paging.renderDOM());
 
         const filterButton = dom.querySelector('#filter-button');
-        filterButton.addEventListener('click', () => {
+        
+        function spinBall() {
             const sideNavPokeball = dom.querySelector('#pokeball-icon');
             sideNavPokeball.classList.remove('spin');
             void sideNavPokeball.offsetWidth;
             sideNavPokeball.classList.add('spin');
+        }
+        
+        filterButton.addEventListener('click', () => {
+            spinBall();
 
             const sortTypesDisplay = dom.querySelector('#sort-types');
             sortTypesDisplay.classList.toggle('scrunch');
         });
+
+        const pagingProps = {
+            totalCards: this.props.totalCards,
+            currentPage: this.props.currentPage,
+            spin: spinBall
+        };
+
+        const paging = new Paging(pagingProps);
+        const sideNav = dom.querySelector('#side-nav');
+        sideNav.appendChild(paging.renderDOM());
     }
 }
