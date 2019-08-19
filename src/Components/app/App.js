@@ -38,12 +38,10 @@ export class App extends Component {
 
         function loadHeroPokemon() {
             const settings = hashStorage.get();
-            console.log(settings);
             getHeroPokemon(settings)
                 .then(data => {
                     const pokemon = data.results;
                     const totalCards = data.count;
-                    console.log(data.results);
                     displayGrid.update({ pokemon: pokemon });
                     sideNav.update({
                         totalCards: +totalCards,

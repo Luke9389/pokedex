@@ -8,10 +8,10 @@ export class Paging extends Component {
         return /*html*/ `
             <li class="side-nav-item" id="paging-container">
                 <button id="page-reveal-button">Page</button>
-                <div id="page-button-container">
-                    <button id="page-back" ${currentPage === 1 ? 'disabled' : '' }>◀</button>
-                    <p id="page-display">1</p>
-                    <button id="page-forward">▶</button>
+                <div id="page-button-container" class="scrunch">
+                    <button id="page-back" class="hidden" ${currentPage === 1 ? 'disabled' : '' }>◀</button>
+                    <p id="page-display" class="hidden">1</p>
+                    <button id="page-forward" class="hidden">▶</button>
                 </div>
             </li>
         `;
