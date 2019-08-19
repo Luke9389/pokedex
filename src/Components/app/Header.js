@@ -1,11 +1,12 @@
 import Component from '../../Component.js';
+import { Search } from './Search.js';
 
 export class Header extends Component {
     renderHTML() {
         return /*html*/ `
-        <header>
-            <img id="pokedex-lense" src="./assets/img/pokedex/pokedex-lense.png"
-                alt="pokedex lense">
+            <header>
+                <img id="pokedex-lense" src="./assets/img/pokedex/pokedex-lense.png"
+                    alt="pokedex lense">
                 <h1>Pokedex!</h1>
                 <div id="search-bar-container">
                     <input id="search-bar" disabled type="text" placeholder="Search">
@@ -13,22 +14,12 @@ export class Header extends Component {
                         <img id="search-icon" src="./assets/img/search-icon.png" alt="search">
                     </button>     
                 </div>
-        </header>
+            </header>
         `;
     }
 
     onRender(dom) {
-        const searchButton = dom.querySelector('#reveal-search-button');
-        searchButton.addEventListener('click', () => {
-            const searchBarContainer = dom.querySelector('#search-bar-container');
-            const searchBar = dom.querySelector('#search-bar');
-
-            if(!searchBar.value) {
-                searchBarContainer.classList.toggle('long');
-                searchBar.toggleAttribute('disabled');
-                searchBar.classList.toggle('opaque');
-            }
-
-        });
+        const searchBar = new Search();
+        dom.appendChild(searchBar.renderDOM());
     }
 }

@@ -14,16 +14,22 @@ export class Search extends Component {
     }
 
     onRender(dom) {
+        const searchBarContainer = dom;
         const searchBar = dom.querySelector('#search-bar');
         const searchButton = dom.querySelector('#reveal-search-button');
 
         searchButton.addEventListener('click', () => {
-            const search = searchBar.value;
-            console.log(search);
-            hashStorage.set({
-                search: search,
-                page: 1
-            });
+            if(!searchBar.value) {
+                searchBarContainer.classList.toggle('long');
+                searchBar.toggleAttribute('disabled');
+                searchBar.classList.toggle('opaque');
+            } else {
+                const search = searchBar.value;
+                hashStorage.set({
+                    pokemon: search.toLowerCase(),
+                    page: 1
+                });
+            }
         });
     }
 }
