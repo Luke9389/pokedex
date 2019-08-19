@@ -241,6 +241,13 @@ main {
     color: whitesmoke;
 }
 
+#page-button-container {
+    border-top: solid 2px grey;
+    background-color: rgb(29, 29, 29);
+    transition: max-height 0.5s;
+    max-height: 10rem;
+}
+
 .side-nav-item button:hover {
     font-weight: 700;
 }
@@ -254,13 +261,6 @@ main {
     border-top: solid 2px grey;
     background-color: rgb(29, 29, 29);
     overflow-y: scroll;
-    transition: max-height 0.3s;
-    max-height: 10rem;
-}
-
-#page-button-container {
-    border-top: solid 2px grey;
-    background-color: rgb(29, 29, 29);
     transition: max-height 0.3s;
     max-height: 10rem;
 }

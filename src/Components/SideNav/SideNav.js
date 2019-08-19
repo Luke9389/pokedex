@@ -1,5 +1,6 @@
 import Component from '../../Component.js';
 import { Paging } from './Paging.js';
+import { Clear } from './Clear.js';
 
 export class SideNav extends Component {
     renderHTML() {
@@ -29,9 +30,6 @@ export class SideNav extends Component {
                             <a><img src="./assets/img/type-icons-circular/steel.png" alt="steel"></a>
                             <a><img src="./assets/img/type-icons-circular/water.png" alt="water"></a>
                         </div>
-                    </li>
-                    <li class="side-nav-item">
-                        <button>Clear</button>
                     </li>
                 </ul>
             </div>
@@ -65,5 +63,8 @@ export class SideNav extends Component {
         const paging = new Paging(pagingProps);
         const sideNav = dom.querySelector('#side-nav');
         sideNav.appendChild(paging.renderDOM());
+
+        const clear = new Clear();
+        sideNav.appendChild(clear.renderDOM());
     }
 }
