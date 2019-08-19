@@ -30,21 +30,22 @@ export class App extends Component {
         const displayGrid = new DisplayGrid(displayGridProps);
         const displayGridSection = dom.querySelector('#card-display-section');
         displayGridSection.appendChild(displayGrid.renderDOM());
-        
-        
+
+
         const sideNav = new SideNav();
         const sideNavSection = dom.querySelector('#side-nav-container');
         sideNavSection.appendChild(sideNav.renderDOM());
-        
+
         function loadHeroPokemon() {
             const settings = hashStorage.get();
+            console.log(settings);
             getHeroPokemon(settings)
                 .then(data => {
                     const pokemon = data.results;
                     const totalCards = data.count;
-
+                    console.log(data.results);
                     displayGrid.update({ pokemon: pokemon });
-                    sideNav.update({ 
+                    sideNav.update({
                         totalCards: +totalCards,
                         currentPage: +settings.page || 1
                     });
