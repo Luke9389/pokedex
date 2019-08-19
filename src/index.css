@@ -169,7 +169,7 @@ main {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     padding-bottom: 2rem;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 1.3rem));
 }
 
 #side-nav-container #pokeball-icon {
@@ -228,9 +228,17 @@ main {
     padding: 0px;
 }
 
-.side-nav-item [class^=page] {
+#page-button-container [id^=page] {
     margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
     font-size: 1rem;
+    color: whitesmoke;
+}
+
+#page-button-container p {
+    margin: 0rem;
+    font-size: 1.3rem;
+    color: whitesmoke;
 }
 
 .side-nav-item button:hover {
@@ -250,8 +258,15 @@ main {
     max-height: 10rem;
 }
 
+#page-button-container {
+    border-top: solid 2px grey;
+    background-color: rgb(29, 29, 29);
+    transition: max-height 0.3s;
+    max-height: 10rem;
+}
+
 .scrunch {
-    max-height: 0rem;
+    max-height: 0rem !important;
 }
 
 ::-webkit-scrollbar {
