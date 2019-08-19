@@ -9,10 +9,10 @@ export class Header extends Component {
                 <h1>Pokedex!</h1>
                 <div id="search-bar-container">
                     <input id="search-bar" disabled type="text" placeholder="Search">
-                        <button id="reveal-search-button">
+                    <button id="reveal-search-button">
                         <img id="search-icon" src="./assets/img/search-icon.png" alt="search">
-                </button>     
-            </div>
+                    </button>     
+                </div>
         </header>
         `;
     }
