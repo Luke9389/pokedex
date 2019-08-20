@@ -30,7 +30,6 @@ function getTypes(data) {
 
 }
 
-
 export function renderPokemonCard(data) {
 
     const card = /*html*/ `

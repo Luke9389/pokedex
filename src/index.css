@@ -91,8 +91,6 @@ main {
     grid-template-areas: ". card-display";
 }
 
-
-
 #card-display-section {
     grid-area: card-display;
     width: 100%;
@@ -162,13 +160,6 @@ main {
     background-repeat: no-repeat;
 }
 
-/* 
-.card .pokemon-types li img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-
 #side-nav-container {
     position: fixed;
     width: 3rem;
@@ -178,7 +169,7 @@ main {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     padding-bottom: 2rem;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 1.3rem));
 }
 
 #side-nav-container #pokeball-icon {
@@ -214,9 +205,18 @@ main {
     width: 100%;
 }
 
+.side-nav-item p {
+    margin-top: 1rem;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 'Kanit', sans-serif;
+}
+
 .side-nav-item button {
     text-decoration: none;
-    outline: none;
+    /* outline: none; */
     background-color: transparent;
     border-color: transparent;
     color: white;
@@ -226,6 +226,26 @@ main {
     font-family: 'Kanit', sans-serif;
     width: 100%;
     padding: 0px;
+}
+
+#page-button-container [id^=page] {
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+#page-button-container p {
+    margin: 0rem;
+    font-size: 1.3rem;
+    color: whitesmoke;
+}
+
+#page-button-container {
+    border-top: solid 2px grey;
+    background-color: rgb(29, 29, 29);
+    transition: max-height 0.5s;
+    max-height: 10rem;
 }
 
 .side-nav-item button:hover {
@@ -246,7 +266,7 @@ main {
 }
 
 .scrunch {
-    max-height: 0rem;
+    max-height: 0rem !important;
 }
 
 ::-webkit-scrollbar {
