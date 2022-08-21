@@ -12,15 +12,7 @@ body {
 }
 
 header {
-    background-image: url("../assets/img/poke-red.png");
-    height: 3rem;
-    position: relative;
-    text-align: center;
-    color: white;
-    font-family: "pokemon-solid";
-    font-size: 2rem;
-    padding-top: 1rem;
-    width: 100%;
+ 
 }
 
 #search-bar-container {
